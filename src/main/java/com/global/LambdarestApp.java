@@ -1,4 +1,4 @@
-package com.myorg;
+package com.global;
 
 import software.amazon.awscdk.App;
 import software.amazon.awscdk.Environment;
@@ -10,7 +10,7 @@ public class LambdarestApp {
     public static void main(final String[] args) {
         App app = new App();
 
-        new LambdarestStack(app, "LambdarestStack", StackProps.builder()
+        new LambdarestStack(app, "LambdarestStack", StackProps.builder()  
                 // If you don't specify 'env', this stack will be environment-agnostic.
                 // Account/Region-dependent features and context lookups will not work,
                 // but a single synthesized template can be deployed anywhere.
@@ -26,17 +26,16 @@ public class LambdarestApp {
 
                 // Uncomment the next block if you know exactly what Account and Region you
                 // want to deploy the stack to.
-                /*
+                
                 .env(Environment.builder()
-                        .account("123456789012")
-                        .region("us-east-1")
+                        .account("396608766492")
+                        .region("eu-west-1")
                         .build())
-                */
+                
 
                 // For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
                 .build());
 
-        app.synth();
+        app.synth(); 
     }
 }
-
